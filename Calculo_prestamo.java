@@ -10,7 +10,7 @@ public class Calculo_prestamo {
     public static void main(String[] args) {
 
         // 
-        // Se crearan 4 variables que comprende el prestamos solicitado,
+        // Se crearan 3 variables que comprende el prestamos solicitado,
         // la cantidad de aportación que se dará para rebajar la deuda,
         // la deuda que es el capital pendiente por amortizar
     
