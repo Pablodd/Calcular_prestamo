@@ -42,7 +42,7 @@ public class Calculo_prestamo {
             // Si la deuda es MAYOR que cero seguiremos dentro del bucle,
             // pero en el momento en el que la deuda sea MENOR que 0 entraremos en la condición while
             // 
-            // Todos los formatos son redondeos para que no haya resultados periodicos
+            // Todos los formatos son redondeados para que no haya resultados periodicos
             // 
 
             do{
@@ -51,8 +51,8 @@ public class Calculo_prestamo {
                 Scanner input2  = new Scanner(System.in);
 
                 // 
-                // En esta parte he introducido un if para que el codigo no se interrumpa si el usuario introduce caracteres
-                // ya que si eso ocurre aparece un mensaje de introducir valores y nos solicita un importe,
+                // En esta parte he introducido un if, para que el codigo no se interrumpa si el usuario introduce caracteres,
+                // ya que si eso ocurre aparece un mensaje pidiendo que por favor se introduzcan valores y nos vuelve a solicitar un importe,
                 // además que continua la deuda donde se quedó, no reinicia de nuevo la solicitud de prestamo
                 // 
                 if(input2.hasNextFloat()){
@@ -63,14 +63,14 @@ public class Calculo_prestamo {
                     System.out.println("Has hecho una aportación de: "+ df.format(aportacion) +" te queda por pagar: "+ df.format(deuda));
                 }else{
 
-                    System.out.println("Por favor introduce valores");
+                    System.out.println("Hemos detectado un error. Por favor introduce valores");
 
                 }
 
             } while (deuda > 0 );
 
             // 
-            // Al hacerse efectiva la condición While entraremos en dos opciones diferentes dependiento del resultado .
+            // Al hacerse efectiva la condición While entraremos en dos opciones diferentes dependiento del resultado.
             // Opciones:
             // 
             // A)Si la deuda es 0 la deuda queda saldada
@@ -87,7 +87,7 @@ public class Calculo_prestamo {
                 }else if (deuda < 0){
 
                     // 
-                    // Cuando aportemos capital de más al darnos un resultado en negativo, se multiplicará por -1 el resultado, para que salga en positivo y redondeado por si el resultado es periodico.
+                    // Cuando aportemos capital de más, al darnos un resultado en negativo, se multiplicará por -1 el resultado, para que salga en positivo y redondeado por si el resultado es periodico.
                     // 
                     
                     System.out.println("Felicidades ha finalizado su prestamo y se le devolverá la cantidad de: " + df.format(deuda*-1)+" que se han pagado de más.");
