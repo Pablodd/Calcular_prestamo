@@ -50,12 +50,23 @@ public class Calculo_prestamo {
                 System.out.println("Introduce una aportación");
                 Scanner input2  = new Scanner(System.in);
 
-                aportacion = input2.nextFloat();
-                
-                deuda = deuda - aportacion;
+                // 
+                // En esta parte he introducido un if para que el codigo no se interrumpa si el usuario introduce caracteres
+                // ya que si eso ocurre aparece un mensaje de introducir valores y nos solicita un importe,
+                // además que continua la deuda donde se quedó, no reinicia de nuevo la solicitud de prestamo
+                // 
+                if(input2.hasNextFloat()){
+                    aportacion = input2.nextFloat();
+                    
+                    deuda = deuda - aportacion;
 
-                System.out.println("Has hecho una aportación de: "+ df.format(aportacion) +" te queda por pagar: "+ df.format(deuda));
-            
+                    System.out.println("Has hecho una aportación de: "+ df.format(aportacion) +" te queda por pagar: "+ df.format(deuda));
+                }else{
+
+                    System.out.println("Por favor introduce valores");
+
+                }
+
             } while (deuda > 0 );
 
             // 
@@ -86,7 +97,7 @@ public class Calculo_prestamo {
             System.out.println("Debes introducir una cifra");
 
         }
-
+        
     }
     
 }
